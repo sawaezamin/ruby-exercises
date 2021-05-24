@@ -3,6 +3,7 @@ class Wizard
   def initialize(name, bearded = true)
     @name = name
     @bearded = bearded
+    @cast_counter = 0
   end
 
   def bearded?
@@ -18,10 +19,15 @@ class Wizard
   end
 
   def rested?
-    true
+    if @cast_counter >= 3
+      false
+    else
+      true
+    end
   end
 
   def cast
+    @cast_counter += 1
     "MAGIC MISSLE"
   end
 end
