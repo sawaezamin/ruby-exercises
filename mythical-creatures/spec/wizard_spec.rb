@@ -51,12 +51,13 @@ RSpec.describe Wizard do
     # create wizard
     wizard = Wizard.new('Sal', bearded: true)
     # casts spell twice
-    expect(wizard.cast)
-    expect(wizard.cast)
+    wizard.cast
     # check if wizard is rested
     expect(wizard.rested?).to eq(true)
     # casts spell
-    expect(wizard.cast)
+    wizard.cast
+    expect(wizard.rested?).to eq(true)
+    wizard.cast
     # check wizard is not rested
     expect(wizard.rested?).to eq(false)
   end
