@@ -1,33 +1,28 @@
 class Wizard
-  attr_reader :name
-  def initialize(name, bearded = true)
+  attr_reader :name, :bearded,
+              :rested, :spell_count
+  def initialize(name, bearded: true)
     @name = name
     @bearded = bearded
-    @cast_counter = 0
+    @rested = true
+    @spell_count = 0
   end
 
   def bearded?
-    if @name == 'Valerie' || @name == 'Stella'
-      false
-    else
-      true
-    end
+    bearded
   end
 
-  def incantation(string)
-    "sudo #{string}"
+  def incantation(chant)
+    "sudo " "#{chant}"
   end
 
   def rested?
-    if @cast_counter >= 3
-      false
-    else
-      true
-    end
+    return false if @spell_count >= 3
+    rested
   end
 
   def cast
-    @cast_counter += 1
-    "MAGIC MISSLE"
+    @spell_count += 1
+    "MAGIC MISSILE!"
   end
 end

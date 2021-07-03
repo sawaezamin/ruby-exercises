@@ -30,6 +30,7 @@ RSpec.describe Dragon do
   it 'has a different color' do
     dragon = Dragon.new('Mnementh', :bronze, 'Flar')
     expect(dragon.color).to eq(:bronze)
+    expect(dragon.rider).to eq('Flar')
   end
 
   it 'was born hungry' do
