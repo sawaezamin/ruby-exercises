@@ -57,7 +57,7 @@ RSpec.describe 'ints and floats' do
     pi = 3.14
     # Using the variable defined above,
     # round the number to the nearest whole number
-    rounded = pi.round()
+    rounded = pi.round
     expect(rounded).to eq(3)
   end
 
@@ -73,7 +73,7 @@ RSpec.describe 'ints and floats' do
     pi = 3.14
     # Using the variable defined above,
     # round the number to the next highest whole number
-    rounded = pi.ceil()
+    rounded = pi.ceil
     expect(rounded).to eq(4)
   end
 end
