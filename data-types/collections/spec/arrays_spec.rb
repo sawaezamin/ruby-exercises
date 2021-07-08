@@ -29,13 +29,13 @@ RSpec.describe 'Arrays' do
     # In the line below, call a method on the nums variable
     # defined above to access the last element
     nums = [1,2,3]
-    actual = nums.last()
+    actual = nums.last
     expected = 3
     expect(actual).to eq(expected)
 
     # Now try to find another way to achieve the same effect
     nums = [1,2,3]
-    actual = nums.pop()
+    actual = nums.pop
     expected = 3
     expect(actual).to eq(expected)
   end
@@ -111,7 +111,7 @@ RSpec.describe 'Arrays' do
   it 'test 10' do
     fourteeners = ["Pikes Peak", nil, "Mount Elbert", nil, "Mount Evans"]
     # Call a method on the fourteeners variable to remove the nils
-    fourteeners = fourteeners.compact()
+    fourteeners = fourteeners.compact
     expect(fourteeners).to eq(["Pikes Peak", "Mount Elbert", "Mount Evans"])
   end
 
@@ -178,5 +178,4 @@ RSpec.describe 'Arrays' do
     # Ruby version is 2.3 or earlier
     expect(roll).to be_a(Integer)
   end
-
 end

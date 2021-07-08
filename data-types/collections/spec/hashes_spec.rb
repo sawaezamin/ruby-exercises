@@ -256,7 +256,7 @@ RSpec.describe 'Hashes' do
     }
     # Call a method on the ages hash defined above
     # to make the keys the values and vice versa
-    opposite = ages.invert 
+    opposite = ages.invert
     expected = {
       4 => :Jimmy,
       8 => :Julio,
